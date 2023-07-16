@@ -1,0 +1,27 @@
+*, ::before ::after{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: pink;
+}
+
+/*** responsive mobile ***/
+
+@media screen (max-width:768px){
+
+.header{
+    display:flex;
+    justify-content:center;
+    width: 100%;
+    height: 63px;
+    padding:14px 89px 13px 89px;
+
+}
+
+.header_logo {
+    font-family: Shrikhand;
+    font-size: 30px;
+    padding: 0px 19px 0px 16px;
+}
+}
