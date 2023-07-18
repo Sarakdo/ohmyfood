@@ -28,6 +28,8 @@ header {
     padding: 14px 89px 13px 89px;
     display:flex;
     justify-content: center;
+    position: relative;
+    z-index: 1000;
 }
 
 header .header_logo{
@@ -38,15 +40,40 @@ header .header_logo{
 .local_text{
     font-style: normal;
     font-weight: 500;
-    justify-text: center;
+    padding: 17px;
 }
 .location{
     display: flex;
+    align-items: center;
     justify-content: center;
     width: 100%;
     height: 50px;
     background: var(--grey-2, #EAEAEA);
-    gap: 17px;
+    
+}
+
+.explo{
+    text-align: center;
+    background-color: #fafafa;
+    padding: 36px;
+}
+
+.explo_title{
+    font-size: 24px;
+    font-weight: 700px;
+}
+.explo_subt{
+    font-family:"Roboto";
+    font-style: normal;
+    font-weight: 300;
+}
+
+.explo_btn{
+    color: white;
+    border-radius: 25px;
+    background: var(--button-gradient, linear-gradient(175deg, #9356DC 0%, #FF79DA 100%));
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    padding: 13px 18px;
 }
 
 }
