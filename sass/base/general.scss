@@ -1,0 +1,22 @@
+*, 
+::before,
+::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    font-family:"Roboto";
+    font-style: normal;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.15);
+    padding: 30px 0px 31.798px 0px
+}
+
+$color-primary: #9356DC;
+$color-secondary: #FF79DA;
+$color-tertiary: #99E2D0;
