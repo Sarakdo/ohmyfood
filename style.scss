@@ -1,0 +1,14 @@
+/***** Base *****/
+@import "./assets/scss/base/base";
+@import "./assets/scss/base/reset";
+/***** Components *****/
+@import "./assets/scss/components/heart";
+@import "./assets/scss/components/loader";
+/***** Layout *****/
+@import "./assets/scss/layout/footer";
+@import "./assets/scss/layout/header";
+/***** Pages *****/
+@import "./assets/scss/pages/homepage";
+@import "./assets/scss/pages/menupages";
+/****** Utils *****/
+@import "./assets/scss/utils/variable";
