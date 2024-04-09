@@ -1,4 +1,6 @@
-$primary: #9356DC;
-$secondary: #FF79DA;
-$tertiary: #99E2D0;
-$color-gradient: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, .9));
+:root {
+    --primary-color: #9356DC;
+    --secondary-color: #FF79DA;
+    --tertiary-color: #99E2D0;
+    --gradient: linear-gradient(0deg, rgba(147, 86, 220, .9), rgba(255, 121, 218, .9))
+}

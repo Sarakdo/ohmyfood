@@ -1,0 +1,35 @@
+.linkfooter {
+    background-color: #353535;
+    display: flex;
+    width: 100%;
+    padding: 22px 25px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+
+    & h4 {
+        color: white;
+    }
+
+    &__link {
+        color: white;
+        text-decoration: none;
+        font-family: "roboto";
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        gap: 7px;
+    }
+
+    &__listElt {
+        margin-left: 10px;
+    }
+
+    &__icon {
+        padding-right: 7px;
+    }
+}
