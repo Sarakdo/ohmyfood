@@ -3,11 +3,12 @@ body {
   margin: 0px;
 }
 
-/* h1 {
-    font-family: "Roboto";
-    font-size: 24px;
-    font-weight: 700;
-} */
+h1 {
+  font-family: "Roboto";
+  font-size: 24px;
+  font-weight: 700;
+}
+
 h2 {
   font-family: "Roboto";
   font-size: 24px;
@@ -16,7 +17,7 @@ h2 {
 
 h3 {
   font-family: "Roboto";
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
 }
 
@@ -86,7 +87,7 @@ header .logo {
   padding: 14px 89px 13px 89px;
 }
 header .logo img {
-  height: 36px;
+  height: 47px;
   width: 206px;
 }
 header .local {
@@ -111,12 +112,11 @@ header .local input {
   color: black;
 }
 
-@media (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
   header {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 30px 0px 31.798px 0px;
   }
   header__logo {
     height: 96px;
@@ -127,14 +127,14 @@ header .local input {
 .expl {
   text-align: center;
   align-items: center;
-  padding: 32px;
+  padding: 32px 0;
   background-color: #F6F6F6;
   display: flex;
   flex-direction: column;
-  gap: 30px;
 }
 .expl__text {
   margin: 0;
+  width: 275px;
 }
 .expl p {
   height: 46px;
@@ -152,7 +152,7 @@ header .local input {
   border-radius: 100px;
   color: #fff;
   background-color: #686868;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background-image: var(--gradient);
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   font-size: 16px;
   font-weight: 500;
@@ -226,7 +226,6 @@ header .local input {
 .restaurant {
   background: #F6F6F6;
   padding: 50px 17px;
-  max-width: 1280px;
 }
 .restaurant__container {
   display: flex;
@@ -234,36 +233,10 @@ header .local input {
   padding: 18px 0;
   gap: 18px;
 }
-.restaurant__container li__heart {
-  position: absolute;
-  right: 20px;
-  bottom: 22px;
-}
 .restaurant__cards {
   background-color: #FFF;
   border-radius: 15px;
-  width: 340px;
-  height: 272px;
-}
-.restaurant__card {
   position: relative;
-  color: inherit;
-  text-decoration: none;
-}
-.restaurant__card img {
-  height: 192px;
-  width: 100%;
-  border: 0 solid transparent;
-  border-radius: 15px 15px 0px 0px;
-  box-shadow: none;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-.restaurant__card h3 {
-  padding: 15px 10px 5px;
-}
-.restaurant__card p {
-  padding: 0px 10px 13px;
 }
 .restaurant__cardbadge {
   background-color: var(--tertiary-color);
@@ -273,8 +246,116 @@ header .local input {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
   position: absolute;
   display: flex;
+  top: 10px;
+  right: 10px;
+}
+.restaurant__text {
+  margin: 15px 0 15px 10px;
+}
+.restaurant__text h3 {
+  margin-bottom: 10px;
+}
+.restaurant__text p {
+  margin: 0;
+}
+.restaurant__card {
+  color: inherit;
+  text-decoration: none;
+  position: relative;
+}
+.restaurant__card img {
+  height: 192px;
+  width: 100%;
+  border-radius: 15px 15px 0px 0px;
+  box-shadow: none;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.restaurant__undercard {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.restaurant__heart {
+  font-size: 30px;
+  right: 20px;
+  position: relative;
+  align-content: center;
+}
+.restaurant__heart i {
+  position: absolute;
+}
+.restaurant__my-heart-full {
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 1s;
+}
+.restaurant__my-heart-full:hover {
+  opacity: 1;
+  color: transparent;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
+/**
+        & i {
+            position: absolute;
+        }
+
+        /**
+        &.my-heart-full {
+            opacity: 0;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+
+        &.my-heart-full:hover {
+            opacity: 1;
+            color: transparent;
+            background-image: linear-gradient(0deg,
+                    rgba(147, 86, 220, 0.9),
+                    rgba(255, 121, 218, 0.9));
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+    }*/
+/***** Media queries******/
+/*** Tablette mode ***/
+/*@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .fonct {
+        &__steps {
+            flex-direction: row;
+            width: 100%;
+            gap: 25px;
+        }
+    }
+
+}/*
+
+
+/*** desktop mode ***/
+@media screen and (min-width: 1024px) {
+  .expl__text {
+    width: 100%;
+  }
+  .expl p {
+    height: 46px;
+    width: 100%;
+  }
+  .fonct {
+    padding: 50px 180px;
+  }
+  .fonct__steps {
+    flex-direction: row;
+    width: 100%;
+    gap: 25px;
+  }
+  .restaurant__container {
+    flex-wrap: wrap;
+    gap: 28px;
+  }
+}
 /****** Utils *****/
 :root {
   --primary-color: #9356DC;

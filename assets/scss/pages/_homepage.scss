@@ -9,6 +9,7 @@
 
     &__text {
         margin: 0;
+        width: 275px;
     }
 
     & p {
@@ -121,13 +122,6 @@
         padding: 18px 0;
         gap: 18px;
 
-        & li {
-            &__heart {
-                position: absolute;
-                right: 20px;
-                bottom: 22px;
-            }
-        }
     }
 
     &__cards {
@@ -135,34 +129,153 @@
         border-radius: 15px;
         position: relative;
 
-        &__card {
-            color: inherit;
-            text-decoration: none;
+    }
 
-            & img {
-                height: 192px;
-                width: 100%;
-                border: 0 solid transparent;
-                border-radius: 15px 15px 0px 0px;
-                box-shadow: none;
-                object-fit: cover;
-            }
+    &__cardbadge {
+        background-color: var(--tertiary-color);
+        color: #1b6150;
+        padding: 5px;
+        border-radius: 2px;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+        position: absolute;
+        display: flex;
+        top: 10px;
+        right: 10px;
+    }
 
-            &badge {
-                background-color: var(--tertiary-color);
-                color: #1b6150;
-                padding: 5px;
-                border-radius: 2px;
-                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-                position: absolute;
-                display: flex;
-                top: 10px;
-                right: 10px;
-            }
+    &__text {
+        margin: 15px 0 15px 10px;
 
-            &text {
-                padding: 0px 10px;
-            }
+
+        & h3 {
+
+            margin-bottom: 10px;
+        }
+
+        & p {
+            margin: 0;
+        }
+    }
+
+    &__card {
+        color: inherit;
+        text-decoration: none;
+        position: relative;
+
+        & img {
+            height: 192px;
+            width: 100%;
+            border-radius: 15px 15px 0px 0px;
+            box-shadow: none;
+            object-fit: cover;
+        }
+    }
+
+    &__undercard {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+    }
+
+    &__heart {
+        font-size: 30px;
+        right: 20px;
+        position: relative;
+        align-content: center;
+
+        & i {
+            position: absolute;
+        }
+
+    }
+
+    &__my-heart-full {
+        opacity: 0;
+        transition-property: all;
+        transition-duration: 1s;
+    }
+
+    &__my-heart-full:hover {
+        opacity: 1;
+        color: transparent;
+        background-image: linear-gradient(0deg,
+                rgba(147, 86, 220, 0.9),
+                rgba(255, 121, 218, 0.9));
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+
+
+}
+
+
+/**
+        & i {
+            position: absolute;
+        }
+
+        /**
+        &.my-heart-full {
+            opacity: 0;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+
+        &.my-heart-full:hover {
+            opacity: 1;
+            color: transparent;
+            background-image: linear-gradient(0deg,
+                    rgba(147, 86, 220, 0.9),
+                    rgba(255, 121, 218, 0.9));
+            background-clip: text;
+            -webkit-background-clip: text;
+        }
+    }*/
+
+/***** Media queries******/
+
+/*** Tablette mode ***/
+/*@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .fonct {
+        &__steps {
+            flex-direction: row;
+            width: 100%;
+            gap: 25px;
+        }
+    }
+
+}/*
+
+
+/*** desktop mode ***/
+@media screen and (min-width: 1024px) {
+    .expl {
+        &__text {
+            width: 100%;
+        }
+
+        & p {
+            height: 46px;
+            width: 100%;
+        }
+
+    }
+
+    .fonct {
+        padding: 50px 180px;
+
+        &__steps {
+            flex-direction: row;
+            width: 100%;
+            gap: 25px;
+        }
+    }
+
+    .restaurant {
+        &__container {
+            flex-wrap: wrap;
+            gap: 28px;
         }
     }
 }

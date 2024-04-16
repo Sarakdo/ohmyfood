@@ -18,7 +18,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="./assets/restaurant/images/logo/ohmyfood.png" styles=height:63px; alt="logo ohmyfood">
+            <img src="./assets/restaurant/images/logo/ohmyfood.png" alt="logo ohmyfood">
         </div>
         <div class="local">
             <i class="fa-solid fa-location-dot local__icon"></i>
@@ -29,7 +29,7 @@
     <main>
 
         <section class="expl">
-            <h2 class="expl__text">Réservez le menu qui <br> vous convient</h2>
+            <h1 class="expl__text">Réservez le menu qui vous convient</h1>
             <p class="expl__subt">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
             <span class="expl__btn">Explorer nos restaurants</span>
         </section>
@@ -63,28 +63,31 @@
             <ul class="restaurant__container">
 
                 <li class="restaurant__cards">
-                    <a class="restaurant__card">
+                    <div class="restaurant__card">
                         <img src="./assets/restaurant/images/restaurants/palette du goût.jpg" alt="la palette du goût">
-                        <span class="restaurant__cardbadge">Nouveau</span>
-                        <div class="restaurant__text">
-                            <h3>La palette du goût</h3>
-                            <p>Ménilmontant</p>
+                        <div class="restaurant__undercard">
+                            <div class="restaurant__text">
+                                <h3>La palette du goût</h3>
+                                <p>Ménilmontant</p>
+                            </div>
+                            <div class="restaurant__heart">
+                                <i class="fa-regular fa-heart "></i>
+                                <i class="fa-solid fa-heart "></i>
+                            </div>
                         </div>
-                    </a>
-                    <div class="restaurant__heart">
-                        <i class="far fa-heart"></i>
                     </div>
+                    <div class="restaurant__cardbadge">Nouveau</div>
                 </li>
 
                 <li class="restaurant__cards">
                     <a class="restaurant__card">
                         <img src="./assets/restaurant/images/restaurants/la note enchantée.jpg" alt="la note enchantée">
-                        <span class="restaurant__cardbadge">Nouveau</span>
                         <div class="restaurant__text">
                             <h3>La note enchantée</h3>
                             <p>Charonne</p>
                         </div>
                     </a>
+                    <div class="restaurant__cardbadge">Nouveau</div>
                 </li>
 
                 <li class="restaurant__cards">
@@ -140,7 +143,7 @@
                     </li>
 
                     <li class="linkfooter__listElt">
-                        <a class="linkfooter__link" href="#">
+                        <a class="linkfooter__link" href="#"> <!-- mettre le renvoi a un email -->
                             Contact
                         </a>
                     </li>
