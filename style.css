@@ -142,7 +142,7 @@ header .logo {
 }
 header .logo img {
   height: 47px;
-  width: 206px;
+  width: 216px;
 }
 header .local {
   display: flex;
@@ -152,6 +152,7 @@ header .local {
   background: #EAEAEA;
   border: none;
   width: 100%;
+  gap: 17px;
 }
 header .local__icon {
   margin-right: 10px;

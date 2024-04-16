@@ -14,7 +14,7 @@ header {
 
     .logo img {
         height: 47px;
-        width: 206px;
+        width: 216px;
     }
 
     .local {
@@ -25,6 +25,7 @@ header {
         background: #EAEAEA;
         border: none;
         width: 100%;
+        gap: 17px;
 
         &__icon {
             margin-right: 10px;
