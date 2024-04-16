@@ -33,3 +33,16 @@
         padding-right: 7px;
     }
 }
+
+@media screen and (min-width: 1024px) {
+
+    .linkfooter {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: space-between;
+
+        &__list {
+            flex-direction: row;
+        }
+    }
+}
