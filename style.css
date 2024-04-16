@@ -42,6 +42,50 @@ ol {
 }
 
 /***** Components *****/
+.restaurant__undercard__heart {
+  font-size: 30px;
+  right: 20px;
+  position: relative;
+  align-content: center;
+}
+.restaurant__undercard__heart i {
+  position: absolute;
+}
+.restaurant__undercard__my-heart-full {
+  opacity: 0;
+  transition-property: all;
+  transition-duration: 1s;
+}
+.restaurant__undercard__my-heart-full:hover {
+  opacity: 1;
+  color: transparent;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/**
+    & i {
+        position: absolute;
+    }
+
+    /**
+    &.my-heart-full {
+        opacity: 0;
+        transition-property: all;
+        transition-duration: 1s;
+    }
+
+    &.my-heart-full:hover {
+        opacity: 1;
+        color: transparent;
+        background-image: linear-gradient(0deg,
+                rgba(147, 86, 220, 0.9),
+                rgba(255, 121, 218, 0.9));
+        background-clip: text;
+        -webkit-background-clip: text;
+    }
+}*/
 /***** Layout *****/
 .linkfooter {
   background-color: #353535;
@@ -275,27 +319,6 @@ header .local input {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-}
-.restaurant__heart {
-  font-size: 30px;
-  right: 20px;
-  position: relative;
-  align-content: center;
-}
-.restaurant__heart i {
-  position: absolute;
-}
-.restaurant__my-heart-full {
-  opacity: 0;
-  transition-property: all;
-  transition-duration: 1s;
-}
-.restaurant__my-heart-full:hover {
-  opacity: 1;
-  color: transparent;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 /**
