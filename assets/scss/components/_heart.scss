@@ -1,6 +1,54 @@
 .restaurant {
     &__container {
         &__undercard {
+            &__heart-empty {
+                font-size: 100px;
+                position: absolute;
+                top: 10;
+                left: 10;
+
+                &__heart-full {
+                    font-size: 100px;
+                    position: absolute;
+                    top: 10;
+                    left: 10;
+                    opacity: 0;
+                    /* Par défaut, cache l'icône pleine */
+                    transition: 0.3s ease;
+                    /* Animation de transition */
+                    -webkit-background-clip: text;
+                    /* Pour appliquer le dégradé à l'intérieur du texte */
+                    background-clip: text;
+                    color: #9356dc;
+                }
+            }
+
+            &__heart-checkbox {
+                position: absolute;
+                opacity: 0;
+                width: 0;
+                height: 0;
+
+                & :checked+.heart-label .fa-solid.fa-heart {
+                    opacity: 1;
+                    /* Affiche l'icône pleine */
+                }
+
+                & :checked+.heart-label .fa-regular.fa-heart {
+                    color: #fff;
+                    /* Couleur du contour du cœur */
+                    background-image: none;
+                    /* Supprime le dégradé de couleur */
+                }
+            }
+        }
+    }
+}
+
+/* 
+.restaurant {
+    &__container {
+        &__undercard {
 
             &__heart {
                 font-size: 30px;
@@ -12,13 +60,17 @@
                     position: absolute;
                 }
 
+                & label {
+                    appearance: none;
+                }
+
                 &__heart-full {
                     opacity: 0;
                     transition-property: all;
                     transition-duration: 1s;
                 }
 
-                &__full:hover {
+                &__heart-full:hover {
                     opacity: 1;
                     color: transparent;
                     background-image: linear-gradient(0deg,
@@ -29,29 +81,5 @@
                 }
             }
         }
-    }
-}
-
-
-/**
-    & i {
-        position: absolute;
-    }
-
-    /**
-    &.my-heart-full {
-        opacity: 0;
-        transition-property: all;
-        transition-duration: 1s;
-    }
-
-    &.my-heart-full:hover {
-        opacity: 1;
-        color: transparent;
-        background-image: linear-gradient(0deg,
-                rgba(147, 86, 220, 0.9),
-                rgba(255, 121, 218, 0.9));
-        background-clip: text;
-        -webkit-background-clip: text;
     }
 }*/

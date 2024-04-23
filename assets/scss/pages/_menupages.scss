@@ -4,6 +4,15 @@
     padding: 14px 89px 13px 17px;
     gap: 42px;
 
+    & a {
+        color: black;
+        transition: transform 3s;
+
+        & :active {
+            transform: scale(0);
+        }
+    }
+
     .iconleft {
         position: absolute;
         left: 22px;
@@ -19,10 +28,9 @@
 }
 
 .containermenu {
-    margin-top: -4rem;
-    border-radius: 2rem 2rem 0 0;
+    margin-top: -64px;
+    border-radius: 32px 32px 0 0;
     background-color: #f6f6f6;
-    z-index: 1;
     position: relative;
 
 
@@ -130,4 +138,18 @@
         margin-right: 20px;
     }
 
+}
+
+@media (max:1440px) {
+    .menuheader {
+        .menuheader {
+            display: flex;
+            width: 1440px;
+            height: 96.339px;
+            padding: 30px 621px 32.137px 17px;
+            align-items: flex-end;
+            gap: 572px;
+            flex-shrink: 0;
+        }
+    }
 }

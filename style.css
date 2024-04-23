@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /***** Base *****/
 body {
   margin: 0px;
@@ -42,50 +43,7 @@ ol {
 }
 
 /***** Components *****/
-.restaurant__container__undercard__heart {
-  font-size: 30px;
-  right: 20px;
-  position: relative;
-  align-content: center;
-}
-.restaurant__container__undercard__heart i {
-  position: absolute;
-}
-.restaurant__container__undercard__heart__heart-full {
-  opacity: 0;
-  transition-property: all;
-  transition-duration: 1s;
-}
-.restaurant__container__undercard__heart__full:hover {
-  opacity: 1;
-  color: transparent;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
-/**
-    & i {
-        position: absolute;
-    }
-
-    /**
-    &.my-heart-full {
-        opacity: 0;
-        transition-property: all;
-        transition-duration: 1s;
-    }
-
-    &.my-heart-full:hover {
-        opacity: 1;
-        color: transparent;
-        background-image: linear-gradient(0deg,
-                rgba(147, 86, 220, 0.9),
-                rgba(255, 121, 218, 0.9));
-        background-clip: text;
-        -webkit-background-clip: text;
-    }
-}*/
+/* @import "./assets/scss/components/heart"; */
 /***** Layout *****/
 .linkfooter {
   background-color: #353535;
@@ -288,6 +246,10 @@ header .local input {
   padding: 18px 0;
   gap: 18px;
 }
+.restaurant__container a {
+  text-decoration: none;
+  color: black;
+}
 .restaurant__cards {
   background-color: #FFF;
   border-radius: 15px;
@@ -298,17 +260,17 @@ header .local input {
   color: #1b6150;
   padding: 5px;
   border-radius: 2px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
   position: absolute;
   display: flex;
   top: 10px;
   right: 10px;
 }
 .restaurant__text {
-  margin: 15px 0 15px 10px;
+  margin: 15px 0 15px 13px;
 }
 .restaurant__text h3 {
-  margin-bottom: 10px;
+  margin: 0;
 }
 .restaurant__text p {
   margin: 0;
@@ -331,29 +293,49 @@ header .local input {
   flex-direction: row;
   justify-content: space-between;
 }
+.restaurant__undercard i {
+  position: absolute;
+  right: 10px;
+  font-size: 27px;
+}
+.restaurant__undercard__heart-empty {
+  font-size: 100px;
+  position: absolute;
+  top: 10;
+  left: 10;
+}
+.restaurant__undercard__heart-full {
+  font-size: 100px;
+  position: absolute;
+  top: 10;
+  left: 10;
+  opacity: 0;
+  /* Par défaut, cache l'icône pleine */
+  transition: 0.3s ease;
+  /* Animation de transition */
+  -webkit-background-clip: text;
+  /* Pour appliquer le dégradé à l'intérieur du texte */
+  background-clip: text;
+  color: #9356dc;
+}
+.restaurant__undercard__heart-checkbox {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.restaurant__undercard__heart-checkbox :checked + .heart-label, .restaurant__undercard__heart-checkbox__heart-full, .restaurant__undercard__heart-checkbox__heart-empty {
+  opacity: 1;
+  /* Affiche l'icône pleine */
+}
+.restaurant__undercard__heart-checkbox :checked + .heart-label,
+.restaurant__undercard__heart-checkbox .fa-regular.fa-heart {
+  color: #fff;
+  /* Couleur du contour du cœur */
+  background-image: none;
+  /* Supprime le dégradé de couleur */
+}
 
-/**
-        & i {
-            position: absolute;
-        }
-
-        /**
-        &.my-heart-full {
-            opacity: 0;
-            transition-property: all;
-            transition-duration: 1s;
-        }
-
-        &.my-heart-full:hover {
-            opacity: 1;
-            color: transparent;
-            background-image: linear-gradient(0deg,
-                    rgba(147, 86, 220, 0.9),
-                    rgba(255, 121, 218, 0.9));
-            background-clip: text;
-            -webkit-background-clip: text;
-        }
-    }*/
 /***** Media queries******/
 /*** Tablette mode ***/
 /*@media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -385,9 +367,17 @@ header .local input {
     width: 100%;
     gap: 25px;
   }
+  .restaurant {
+    padding: 50px 180px;
+  }
   .restaurant__container {
     flex-wrap: wrap;
     gap: 28px;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .restaurant__cards {
+    width: 48.3%;
   }
 }
 .menuheader {
@@ -395,6 +385,13 @@ header .local input {
   align-items: center;
   padding: 14px 89px 13px 17px;
   gap: 42px;
+}
+.menuheader a {
+  color: black;
+  transition: transform 3s;
+}
+.menuheader a :active {
+  transform: scale(0);
 }
 .menuheader .iconleft {
   position: absolute;
