@@ -43,12 +43,61 @@ ol {
 }
 
 /***** Components *****/
-/* @import "./assets/scss/components/heart"; */
+.restaurant__heart .heart-label {
+  position: relative;
+  cursor: pointer;
+}
+.restaurant__heart .heart-empty,
+.restaurant__heart .heart-full {
+  font-size: 26px;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.restaurant__heart .heart-full {
+  opacity: 0;
+  background: linear-gradient(to bottom, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.restaurant__heart .heart-checkbox:checked + label .heart-empty {
+  opacity: 0;
+}
+.restaurant__heart .heart-checkbox:checked + label .heart-full {
+  opacity: 1;
+}
+
+.containermenu__title .heart-label {
+  position: relative;
+  cursor: pointer;
+}
+.containermenu__title .heart-empty,
+.containermenu__title .heart-full {
+  font-size: 26px;
+  transition: opacity 0.3s ease;
+  position: absolute;
+  top: 35px;
+}
+.containermenu__title .heart-full {
+  opacity: 0;
+  background: linear-gradient(to bottom, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.containermenu__title .heart-checkbox:checked + label .heart-empty {
+  opacity: 0;
+}
+.containermenu__title .heart-checkbox:checked + label .heart-full {
+  opacity: 1;
+}
+
 /***** Layout *****/
 .linkfooter {
   background-color: #353535;
   display: flex;
-  width: 100%;
   padding: 22px 25px;
   flex-direction: column;
   align-items: flex-start;
@@ -96,17 +145,17 @@ header {
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
 }
 header .logo {
-  padding: 14px 89px 13px 89px;
+  align-content: center;
 }
 header .logo img {
-  height: 47px;
+  height: 34px;
   width: 216px;
 }
 header .local {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 17px;
+  padding: 17px 0 17px 70px;
   background: #EAEAEA;
   border: none;
   width: 100%;
@@ -293,65 +342,25 @@ header .local input {
   flex-direction: row;
   justify-content: space-between;
 }
-.restaurant__undercard i {
-  position: absolute;
-  right: 10px;
-  font-size: 27px;
-}
-.restaurant__undercard__heart-empty {
-  font-size: 100px;
-  position: absolute;
-  top: 10;
-  left: 10;
-}
-.restaurant__undercard__heart-full {
-  font-size: 100px;
-  position: absolute;
-  top: 10;
-  left: 10;
-  opacity: 0;
-  /* Par défaut, cache l'icône pleine */
-  transition: 0.3s ease;
-  /* Animation de transition */
-  -webkit-background-clip: text;
-  /* Pour appliquer le dégradé à l'intérieur du texte */
-  background-clip: text;
-  color: #9356dc;
-}
-.restaurant__undercard__heart-checkbox {
-  position: absolute;
-  opacity: 0;
-  width: 0;
-  height: 0;
-}
-.restaurant__undercard__heart-checkbox :checked + .heart-label, .restaurant__undercard__heart-checkbox__heart-full, .restaurant__undercard__heart-checkbox__heart-empty {
-  opacity: 1;
-  /* Affiche l'icône pleine */
-}
-.restaurant__undercard__heart-checkbox :checked + .heart-label,
-.restaurant__undercard__heart-checkbox .fa-regular.fa-heart {
-  color: #fff;
-  /* Couleur du contour du cœur */
-  background-image: none;
-  /* Supprime le dégradé de couleur */
-}
 
 /***** Media queries******/
 /*** Tablette mode ***/
-/*@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .fonct {
-        &__steps {
-            flex-direction: row;
-            width: 100%;
-            gap: 25px;
-        }
-    }
-
-}/*
-
-
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .restaurant {
+    padding: 20px 60px;
+  }
+  .restaurant__container {
+    flex-wrap: wrap;
+    gap: 28px;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .restaurant__container a {
+    width: 45%;
+  }
+}
 /*** desktop mode ***/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
   .expl__text {
     width: 100%;
   }
@@ -375,9 +384,10 @@ header .local input {
     gap: 28px;
     flex-direction: row;
     justify-content: center;
+    width: 100%;
   }
-  .restaurant__cards {
-    width: 48.3%;
+  .restaurant__container a {
+    width: 48%;
   }
 }
 .menuheader {
@@ -389,6 +399,7 @@ header .local input {
 .menuheader a {
   color: black;
   transition: transform 3s;
+  font-size: 20px;
 }
 .menuheader a :active {
   transform: scale(0);
@@ -408,10 +419,9 @@ header .local input {
 }
 
 .containermenu {
-  margin-top: -4rem;
-  border-radius: 2rem 2rem 0 0;
+  margin-top: -64px;
+  border-radius: 32px 32px 0 0;
   background-color: #f6f6f6;
-  z-index: 1;
   position: relative;
 }
 .containermenu h2 {
@@ -423,13 +433,36 @@ header .local input {
   display: flex;
   width: 100%;
   flex-direction: row;
-  gap: 78px;
-  align-items: baseline;
-  padding: 0 20px 0 20px;
+  gap: 42px;
+  align-items: center;
+  padding-left: 10px;
 }
-.containermenu__title i {
-  align-content: center;
-  font-size: 25px;
+
+.order {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 130px;
+  align-items: center;
+}
+.order__btn {
+  padding: 18px 0 18px 63px;
+  border-radius: 100px;
+  color: #fff;
+  background-color: #686868;
+  background-image: var(--gradient);
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Roboto";
+  width: 150px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.order__btn:hover {
+  background-color: white;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .allmenu {
@@ -504,7 +537,74 @@ header .local input {
   align-items: flex-end;
   margin-right: 20px;
 }
+.menuitems .checkbox-custom {
+  background-color: #99e2d0;
+  width: 60px;
+  height: 70px;
+  place-content: center;
+  font-size: 20px;
+  display: grid;
+  align-content: center;
+  place-items: center;
+  transition: transform 0.3s ease-in-out;
+  cursor: pointer;
+}
+.menuitems .checkbox-custom i {
+  color: #99E2D0;
+  background-color: #FFF;
+  border-radius: 50%;
+  font-size: 18px;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  align-content: center;
+  place-items: center;
+}
 
+input[type=checkbox]:checked + .checkbox-custom {
+  transform: translate(100%, 0);
+}
+
+/* Cacher la case à cocher par défaut */
+input[type=checkbox] {
+  display: none;
+}
+
+/*** desktop mode ***/
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  header {
+    box-shadow: none;
+  }
+  header__menuheader {
+    display: flex;
+    place-content: space-between;
+    padding: 33px 50px 50px 50px;
+  }
+  main {
+    padding: 0 180px 0 180px;
+  }
+  .containermenu {
+    padding: 11px 0 187px 0;
+  }
+  .containermenu__title {
+    justify-content: center;
+  }
+  .containermenu__title__heart-full, .containermenu__title__heart-empty {
+    top: 65px;
+  }
+  .restoimg {
+    -o-object-fit: cover;
+       object-fit: cover;
+    width: 1440px;
+    height: 475px;
+  }
+  .linkfooter {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: end;
+    gap: 70px;
+  }
+}
 /****** Utils *****/
 :root {
   --primary-color: #9356DC;

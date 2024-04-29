@@ -1,85 +1,71 @@
 .restaurant {
-    &__container {
-        &__undercard {
-            &__heart-empty {
-                font-size: 100px;
-                position: absolute;
-                top: 10;
-                left: 10;
+    &__heart {
+        .heart-label {
+            position: relative;
+            cursor: pointer;
+        }
 
-                &__heart-full {
-                    font-size: 100px;
-                    position: absolute;
-                    top: 10;
-                    left: 10;
-                    opacity: 0;
-                    /* Par défaut, cache l'icône pleine */
-                    transition: 0.3s ease;
-                    /* Animation de transition */
-                    -webkit-background-clip: text;
-                    /* Pour appliquer le dégradé à l'intérieur du texte */
-                    background-clip: text;
-                    color: #9356dc;
-                }
-            }
+        .heart-empty,
+        .heart-full {
+            font-size: 26px;
+            transition: opacity 0.3s ease;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
 
-            &__heart-checkbox {
-                position: absolute;
-                opacity: 0;
-                width: 0;
-                height: 0;
+        .heart-full {
+            opacity: 0;
+            background: linear-gradient(to bottom,
+                    rgba(147, 86, 220, 0.9),
+                    rgba(255, 121, 218, 0.9));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
 
-                & :checked+.heart-label .fa-solid.fa-heart {
-                    opacity: 1;
-                    /* Affiche l'icône pleine */
-                }
+        .heart-checkbox:checked+label .heart-empty {
+            opacity: 0;
+        }
 
-                & :checked+.heart-label .fa-regular.fa-heart {
-                    color: #fff;
-                    /* Couleur du contour du cœur */
-                    background-image: none;
-                    /* Supprime le dégradé de couleur */
-                }
-            }
+        .heart-checkbox:checked+label .heart-full {
+            opacity: 1;
+        }
+    }
+
+}
+
+.containermenu {
+    &__title {
+        .heart-label {
+            position: relative;
+            cursor: pointer;
+        }
+
+        .heart-empty,
+        .heart-full {
+            font-size: 26px;
+            transition: opacity 0.3s ease;
+            position: absolute;
+            top: 35px;
+        }
+
+        .heart-full {
+            opacity: 0;
+            background: linear-gradient(to bottom,
+                    rgba(147, 86, 220, 0.9),
+                    rgba(255, 121, 218, 0.9));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .heart-checkbox:checked+label .heart-empty {
+            opacity: 0;
+        }
+
+        .heart-checkbox:checked+label .heart-full {
+            opacity: 1;
         }
     }
 }
-
-/* 
-.restaurant {
-    &__container {
-        &__undercard {
-
-            &__heart {
-                font-size: 30px;
-                right: 20px;
-                position: relative;
-                align-content: center;
-
-                & i {
-                    position: absolute;
-                }
-
-                & label {
-                    appearance: none;
-                }
-
-                &__heart-full {
-                    opacity: 0;
-                    transition-property: all;
-                    transition-duration: 1s;
-                }
-
-                &__heart-full:hover {
-                    opacity: 1;
-                    color: transparent;
-                    background-image: linear-gradient(0deg,
-                            rgba(147, 86, 220, 0.9),
-                            rgba(255, 121, 218, 0.9));
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                }
-            }
-        }
-    }
-}*/

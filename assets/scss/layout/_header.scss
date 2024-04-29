@@ -9,11 +9,11 @@ header {
 
 
     .logo {
-        padding: 14px 89px 13px 89px;
+        align-content: center;
     }
 
     .logo img {
-        height: 47px;
+        height: 34px;
         width: 216px;
     }
 
@@ -21,7 +21,7 @@ header {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 17px;
+        padding: 17px 0 17px 70px;
         background: #EAEAEA;
         border: none;
         width: 100%;
@@ -30,6 +30,7 @@ header {
         &__icon {
             margin-right: 10px;
             color: #353535;
+
         }
 
         & input {

@@ -37,12 +37,14 @@
         font-family: "Roboto";
         width: 177px;
         height: 25px;
+
+        &:hover {
+            background-color: white;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.50);
+        }
+
     }
 
-    &__btn:hover {
-        background-color: white;
-        box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.50);
-    }
 }
 
 /** FONCTIONNEMENT**/
@@ -176,78 +178,33 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+    }
+}
 
-        & i {
-            position: absolute;
-            right: 10px;
-            font-size: 27px;
-        }
+/***** Media queries******/
 
-        &__heart-empty {
-            font-size: 100px;
-            position: absolute;
-            top: 10;
-            left: 10;
-        }
+/*** Tablette mode ***/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
 
-        &__heart-full {
-            font-size: 100px;
-            position: absolute;
-            top: 10;
-            left: 10;
-            opacity: 0;
-            /* Par défaut, cache l'icône pleine */
-            transition: 0.3s ease;
-            /* Animation de transition */
-            -webkit-background-clip: text;
-            /* Pour appliquer le dégradé à l'intérieur du texte */
-            background-clip: text;
-            color: #9356dc;
-        }
+    .restaurant {
+        padding: 20px 60px;
 
+        &__container {
+            flex-wrap: wrap;
+            gap: 28px;
+            flex-direction: row;
+            justify-content: center;
 
-        &__heart-checkbox {
-            position: absolute;
-            opacity: 0;
-            width: 0;
-            height: 0;
-
-            & :checked+.heart-label,
-            &__heart-full,
-            &__heart-empty {
-                opacity: 1;
-                /* Affiche l'icône pleine */
-            }
-
-            & :checked+.heart-label,
-            .fa-regular.fa-heart {
-                color: #fff;
-                /* Couleur du contour du cœur */
-                background-image: none;
-                /* Supprime le dégradé de couleur */
+            & a {
+                width: 45%;
             }
         }
     }
 }
 
 
-/***** Media queries******/
-
-/*** Tablette mode ***/
-/*@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .fonct {
-        &__steps {
-            flex-direction: row;
-            width: 100%;
-            gap: 25px;
-        }
-    }
-
-}/*
-
-
 /*** desktop mode ***/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width:1440px) {
     .expl {
         &__text {
             width: 100%;
@@ -278,11 +235,13 @@
             gap: 28px;
             flex-direction: row;
             justify-content: center;
+            width: 100%;
+
+            & a {
+                width: 48%;
+            }
         }
 
-        &__cards {
-            width: 48.3%;
-        }
 
     }
 }
