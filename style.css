@@ -94,6 +94,14 @@ ol {
   opacity: 1;
 }
 
+@keyframes itemApear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 /***** Layout *****/
 .linkfooter {
   background-color: #353535;
@@ -142,7 +150,6 @@ header {
   flex-direction: column;
   gap: 10px;
   padding-top: 10px;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
 }
 header .logo {
   align-content: center;
@@ -160,6 +167,7 @@ header .local {
   border: none;
   width: 100%;
   gap: 17px;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
 }
 header .local__icon {
   margin-right: 10px;
@@ -174,7 +182,7 @@ header .local input {
   color: black;
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
   header {
     width: 100%;
     display: flex;
@@ -182,6 +190,9 @@ header .local input {
   }
   header__logo {
     height: 96px;
+  }
+  header .local {
+    box-shadow: none;
   }
 }
 /***** Pages *****/
@@ -346,6 +357,9 @@ header .local input {
 /***** Media queries******/
 /*** Tablette mode ***/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  main {
+    padding: 0;
+  }
   .restaurant {
     padding: 20px 60px;
   }
@@ -395,6 +409,7 @@ header .local input {
   align-items: center;
   padding: 14px 89px 13px 17px;
   gap: 42px;
+  display: flex;
 }
 .menuheader a {
   color: black;
@@ -508,6 +523,7 @@ header .local input {
   background-color: #FFF;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
+  animation: itemApear 1s forwards;
 }
 .menuitems__text {
   overflow: hidden;
@@ -570,27 +586,39 @@ input[type=checkbox] {
   display: none;
 }
 
-/*** desktop mode ***/
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
-  header {
-    box-shadow: none;
+/*** Tablette mode ***/
+@media screen and (min-width: 420px) and (max-width: 1023px) {
+  .menuheader {
+    padding: 14px 14px 13px 17px;
+    gap: 267px;
   }
-  header__menuheader {
+}
+/*** Desktop mode ***/
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .menuheader {
+    box-shadow: none;
+    gap: 414px;
     display: flex;
     place-content: space-between;
     padding: 33px 50px 50px 50px;
   }
-  main {
-    padding: 0 180px 0 180px;
+  .fonct {
+    padding: 50px 119px;
+  }
+  .restaurant {
+    padding: 50px 119px;
   }
   .containermenu {
-    padding: 11px 0 187px 0;
+    padding: 11px 0 16px 0;
+  }
+  .containermenu h2 {
+    padding: 0;
   }
   .containermenu__title {
     justify-content: center;
   }
-  .containermenu__title__heart-full, .containermenu__title__heart-empty {
-    top: 65px;
+  .containermenu__title .heart-label {
+    top: 73px;
   }
   .restoimg {
     -o-object-fit: cover;

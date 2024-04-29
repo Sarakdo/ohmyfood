@@ -185,6 +185,9 @@
 
 /*** Tablette mode ***/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+    main {
+        padding: 0;
+    }
 
     .restaurant {
         padding: 20px 60px;
@@ -200,6 +203,8 @@
             }
         }
     }
+
+
 }
 
 
