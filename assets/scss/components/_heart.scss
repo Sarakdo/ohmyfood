@@ -10,7 +10,6 @@
             font-size: 26px;
             transition: opacity 0.3s ease;
             position: absolute;
-            top: 20px;
             right: 20px;
         }
 
@@ -32,11 +31,10 @@
             opacity: 1;
         }
     }
-
 }
 
 .containermenu {
-    &__title {
+    &__heart {
         .heart-label {
             position: relative;
             cursor: pointer;
@@ -47,7 +45,6 @@
             font-size: 26px;
             transition: opacity 0.3s ease;
             position: absolute;
-            top: 35px;
         }
 
         .heart-full {

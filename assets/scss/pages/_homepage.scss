@@ -116,7 +116,7 @@
 /** RESTAURANT**/
 .restaurant {
     background: #F6F6F6;
-    padding: 50px 17px;
+    padding: 17px;
 
     &__container {
         display: flex;
@@ -185,8 +185,20 @@
 
 /*** Tablette mode ***/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-    main {
-        padding: 0;
+
+    .fonct {
+        padding: 50px 20px 50px 20px;
+
+        &__steps {
+            flex-direction: row;
+            width: 100%;
+            gap: 25px;
+
+        }
+
+        &__step {
+            padding: 20px 4px 20px 20px;
+        }
     }
 
     .restaurant {
@@ -203,13 +215,11 @@
             }
         }
     }
-
-
 }
 
 
 /*** desktop mode ***/
-@media screen and (min-width: 1024px) and (max-width:1440px) {
+@media screen and (min-width: 1024px) {
     .expl {
         &__text {
             width: 100%;
@@ -223,17 +233,21 @@
     }
 
     .fonct {
-        padding: 50px 180px;
+        padding: 50px 90px;
 
         &__steps {
-            flex-direction: row;
             width: 100%;
+            flex-direction: row;
             gap: 25px;
+
+            &__step {
+                padding: 20px 0px 20px 27px;
+            }
         }
     }
 
     .restaurant {
-        padding: 50px 180px;
+        padding: 50px 118px;
 
         &__container {
             flex-wrap: wrap;

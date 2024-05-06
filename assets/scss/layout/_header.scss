@@ -23,7 +23,7 @@ header {
         padding: 17px 0 17px 70px;
         background: #EAEAEA;
         border: none;
-        width: 100%;
+        align-self: stretch;
         gap: 17px;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
 
@@ -44,6 +44,10 @@ header {
     }
 }
 
+/*** Tablette mode ***/
+@media screen and (min-width:768px) and (max-width:1023px) {}
+
+/*** Desktop mode ***/
 @media screen and (min-width: 1024px) and (max-width:1440px) {
     header {
         width: 100%;

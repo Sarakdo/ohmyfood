@@ -8,6 +8,7 @@
 
     & h4 {
         color: white;
+        margin: 0;
     }
 
     &__link {
@@ -33,6 +34,21 @@
     }
 }
 
+/*** Tablette mode ***/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+
+    .linkfooter {
+        flex-direction: row-reverse;
+        align-items: center;
+
+        &__list {
+            flex-direction: row;
+        }
+    }
+
+}
+
+/*** Desktop mode ***/
 @media screen and (min-width: 1024px) {
 
     .linkfooter {

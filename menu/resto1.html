@@ -32,16 +32,15 @@
         <section class="containermenu">
             <div class="containermenu__title">
                 <h2>La palette du goût </h2>
-                <div class="containermenu">
+                <div class="containermenu__heart">
                     <input type="checkbox" id="heart-checkbox" class="heart-checkbox" hidden>
                     <label for="heart-checkbox" class="heart-label">
                         <i class="fa-regular fa-heart heart-empty"></i>
                         <i class="fa-solid fa-heart heart-full"></i>
                     </label>
+                    </input>
                 </div>
-
             </div>
-
             <div class="allmenu">
                 <section class="allmenu__info">
                     <h3>ENTRÉES</h3>
@@ -51,12 +50,12 @@
                                 <h4 class="menuitems__title">Fricassée d'escargots </h4>
                                 <p class="menuitems__subtitle">Au piment d'Espelette</p>
                             </div>
-                            <p class="menuitems__price">25€</p>
-                            <label>
-                                <input type="checkbox" id="select-checkbox" />
-                                <span class="checkbox-custom">
-                                    <i class="fa-solid fa-check"></i></span>
-                            </label>
+                            <div class="menuitems__group">
+                                <p class="menuitems__price">25€</p>
+                                <div class="checkbox-custom">
+                                    <i class="fa-solid fa-check" aria-hidden></i>
+                                </div>
+                            </div>
                         </article>
 
                         <article class="menuitems__info">
@@ -64,7 +63,12 @@
                                 <h4 class="menuitems__title">Foie gras de canard mi-cuit</h4>
                                 <p class="menuitems__subtitle">Et ses copeaux de truffe noire</p>
                             </div>
-                            <p class="menuitems__price">35€</p>
+                            <div class="menuitems__group">
+                                <p class="menuitems__price">35€</p>
+                                <div class="checkbox-custom">
+                                    <i class="fa-solid fa-check" aria-hidden></i>
+                                </div>
+                            </div>
                         </article>
 
                         <article class="menuitems__info">
@@ -72,9 +76,13 @@
                                 <h4 class="menuitems__title">Œuf au plat</h4>
                                 <p class="menuitems__subtitle">Assaisonné à la truffe sur lit de caviar</p>
                             </div>
-                            <p class="menuitems__price">20€</p>
+                            <div class="menuitems__group">
+                                <p class="menuitems__price">20€</p>
+                                <div class="checkbox-custom">
+                                    <i class="fa-solid fa-check" aria-hidden></i>
+                                </div>
+                            </div>
                         </article>
-
                     </section>
                     <h3>PLATS</h3>
                     <section class="menuitems">
@@ -83,7 +91,12 @@
                                 <h4 class="menuitems__title">Filet de bœuf aux herbes</h4>
                                 <p class="menuitems__subtitle">Accompagné de sa ribambelle de légumes</p>
                             </div>
-                            <p class="menuitems__price">40€</p>
+                            <div class="menuitems__group">
+                                <p class="menuitems__price">40€</p>
+                                <div class="checkbox-custom">
+                                    <i class="fa-solid fa-check" aria-hidden></i>
+                                </div>
+                            </div>
                         </article>
 
                         <article class="menuitems__info">
@@ -91,14 +104,24 @@
                                 <h4 class="menuitems__title">Parmentier de queue de bœuf</h4>
                                 <p class="menuitems__subtitle">À la truffe noire sur sa purée de panais</p>
                             </div>
-                            <p class="menuitems__price">35€</p>
+                            <div class="menuitems__group">
+                                <p class="menuitems__price">35€</p>
+                                <div class="checkbox-custom">
+                                    <i class="fa-solid fa-check" aria-hidden></i>
+                                </div>
+                            </div>
                         </article>
                         <article class="menuitems__info">
                             <div class="menuitems__text">
                                 <h4 class="menuitems__title">Filet de turbot</h4>
                                 <p class="menuitems__subtitle">Aux agrumes</p>
                             </div>
-                            <p class="menuitems__price">44€</p>
+                            <div class="menuitems__group">
+                                <p class="menuitems__price">44€</p>
+                                <div class="checkbox-custom">
+                                    <i class="fa-solid fa-check" aria-hidden></i>
+                                </div>
+                            </div>
                         </article>
                     </section>
 
@@ -109,21 +132,36 @@
                                 <h4 class="menuitems__title">Paris-Brest</h4>
                                 <p class="menuitems__subtitle">Revisité</p>
                             </div>
-                            <p class="menuitems__price">18€</p>
+                            <div class="menuitems__group">
+                                <p class="menuitems__price">18€</p>
+                                <div class="checkbox-custom">
+                                    <i class="fa-solid fa-check" aria-hidden></i>
+                                </div>
+                            </div>
                         </article>
                         <article class="menuitems__info">
                             <div class="menuitems__text">
                                 <h4 class="menuitems__title">Macaron au chocolat d'exception </h4>
                                 <p class="menuitems__subtitle">Et glace à la vanille de Madagascar</p>
                             </div>
-                            <p class="menuitems__price">22€</p>
+                            <div class="menuitems__group">
+                                <p class="menuitems__price">22€</p>
+                                <div class="checkbox-custom">
+                                    <i class="fa-solid fa-check" aria-hidden></i>
+                                </div>
+                            </div>
                         </article>
                         <article class="menuitems__info">
                             <div class="menuitems__text">
                                 <h4 class="menuitems__title">Mousse au chocolat </h4>
                                 <p class="menuitems__subtitle">Au piment d'Espelette et à la truffe noire</p>
                             </div>
-                            <p class="menuitems__price">23€</p>
+                            <div class="menuitems__group">
+                                <p class="menuitems__price">23€</p>
+                                <div class="checkbox-custom">
+                                    <i class="fa-solid fa-check" aria-hidden></i>
+                                </div>
+                            </div>
                         </article>
                     </section>
                 </section>
@@ -151,7 +189,7 @@
                 <li class="linkfooter__listElt">
                     <a class="linkfooter__link" href="#">
                         <i class="fa-solid fa-handshake-angle footer_icon"></i>
-                        Devenir partenaire</i>
+                        Devenir partenaire
                     </a>
                 </li>
 
