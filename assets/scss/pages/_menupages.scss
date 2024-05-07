@@ -172,21 +172,17 @@
         padding: 15px;
     }
 
-
     & .checkbox-custom {
         background-color: #99e2d0;
-        margin-right: -66px;
         width: 69px;
+        height: 70px;
+        font-size: 20px;
+        overflow: hidden;
         display: flex;
-        align-items: center;
+        place-items: center;
         justify-content: center;
-        transition-duration: .5s;
-
-
-        &:hover,
-        &.menuitems {
-            margin-right: -1px;
-        }
+        transition: transform 0.3s ease-in;
+        cursor: pointer;
 
         & i {
             color: #99E2D0;
@@ -199,7 +195,20 @@
             justify-content: center;
             border-radius: 100px;
             transition-duration: .5s;
+
         }
+    }
+
+
+    input[type="checkbox"]:checked+.checkbox-custom+.menuitems__group {
+        transform: translate(100%, 0);
+        margin-left: 40px
+    }
+
+    /* Cacher la case à cocher par défaut */
+    input[type="checkbox"] {
+        display: none;
+        margin-right: -40px
     }
 }
 
@@ -217,7 +226,8 @@
 
 
 /*** Tablette mode ***/
-@media screen and (min-width:768px) and (max-width:1023px) {
+@media screen and (min-width:768px) and (max-width:1024px) {
+
     .menuheader {
         padding: 14px 14px 13px 17px;
         gap: 267px;
@@ -238,14 +248,19 @@
 
 /*** Desktop mode ***/
 @media screen and (min-width: 1024px) {
+    .menumain {
+        padding-left: 192px;
+        padding-right: 192px;
+    }
 
     .menuheader {
         box-shadow: none;
-        gap: 361px;
-        width: 100%;
+        gap: 553px;
         display: flex;
-        place-content: flex-start;
-        padding: 33px 50px 50px 50px;
+        align-items: flex-end;
+        justify-content: flex-start;
+        padding: 33px 50px 33px 50px;
+        width: auto;
     }
 
     .fonct {

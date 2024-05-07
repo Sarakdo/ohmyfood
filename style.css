@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /***** Base *****/
 body {
   margin: 0;
@@ -565,6 +566,9 @@ header .local input {
   top: 26px;
 }
 
+.menuitems {
+  /* Cacher la case à cocher par défaut */
+}
 .menuitems__info {
   display: flex;
   margin: 15px;
@@ -613,15 +617,15 @@ header .local input {
 }
 .menuitems .checkbox-custom {
   background-color: #99e2d0;
-  margin-right: -66px;
   width: 69px;
+  height: 70px;
+  font-size: 20px;
+  overflow: hidden;
   display: flex;
-  align-items: center;
+  place-items: center;
   justify-content: center;
-  transition-duration: 0.5s;
-}
-.menuitems .checkbox-custom:hover, .menuitems .checkbox-custom.menuitems {
-  margin-right: -1px;
+  transition: transform 0.3s ease-in;
+  cursor: pointer;
 }
 .menuitems .checkbox-custom i {
   color: #99E2D0;
@@ -635,6 +639,14 @@ header .local input {
   border-radius: 100px;
   transition-duration: 0.5s;
 }
+.menuitems input[type=checkbox]:checked + .checkbox-custom + .menuitems__group {
+  transform: translate(100%, 0);
+  margin-left: 40px;
+}
+.menuitems input[type=checkbox] {
+  display: none;
+  margin-right: -40px;
+}
 
 @keyframes itemApear {
   0% {
@@ -645,7 +657,7 @@ header .local input {
   }
 }
 /*** Tablette mode ***/
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .menuheader {
     padding: 14px 14px 13px 17px;
     gap: 267px;
@@ -660,13 +672,18 @@ header .local input {
 }
 /*** Desktop mode ***/
 @media screen and (min-width: 1024px) {
+  .menumain {
+    padding-left: 192px;
+    padding-right: 192px;
+  }
   .menuheader {
     box-shadow: none;
-    gap: 361px;
-    width: 100%;
+    gap: 553px;
     display: flex;
-    place-content: flex-start;
-    padding: 33px 50px 50px 50px;
+    align-items: flex-end;
+    justify-content: flex-start;
+    padding: 33px 50px 33px 50px;
+    width: auto;
   }
   .fonct {
     padding: 50px 119px;
