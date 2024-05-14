@@ -108,7 +108,7 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1;
-  opacity: 0.9;
+  opacity: 1;
 }
 .loader-container .loader {
   height: 200px;
@@ -641,11 +641,11 @@ header .local input {
 }
 .menuitems input[type=checkbox]:checked + .checkbox-custom + .menuitems__group {
   transform: translate(100%, 0);
-  margin-left: 40px;
+  margin-left: 0;
 }
-.menuitems input[type=checkbox] {
+.menuitems input[type=checkbox]:not(:checked) {
   display: none;
-  margin-right: -40px;
+  margin-left: 40px;
 }
 
 @keyframes itemApear {

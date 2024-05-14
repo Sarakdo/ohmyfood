@@ -202,14 +202,16 @@
 
     input[type="checkbox"]:checked+.checkbox-custom+.menuitems__group {
         transform: translate(100%, 0);
-        margin-left: 40px
+        margin-left: 0;
     }
 
     /* Cacher la case à cocher par défaut */
-    input[type="checkbox"] {
+    input[type="checkbox"]:not(:checked) {
         display: none;
-        margin-right: -40px
+        margin-left: 40px;
     }
+
+
 }
 
 
