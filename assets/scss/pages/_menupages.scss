@@ -49,6 +49,7 @@
         gap: 42px;
         align-items: center;
         padding-left: 10px;
+        justify-content: center;
     }
 }
 
@@ -326,21 +327,16 @@
         padding: 50px 119px;
     }
 
-    .containermenu {
+    .menucontainer {
         padding: 11px 0 16px 0;
 
         & h2 {
             padding: 0;
         }
 
-        &__title {
-            justify-content: center;
-
-            & .heart-label {
-                bottom: 12px;
-            }
+        & .heart-label {
+            bottom: 12px;
         }
-
     }
 
     .allmenu {

@@ -509,6 +509,7 @@ header .local input {
   gap: 42px;
   align-items: center;
   padding-left: 10px;
+  justify-content: center;
 }
 
 .order {
@@ -730,16 +731,13 @@ header .local input {
   .restaurant {
     padding: 50px 119px;
   }
-  .containermenu {
+  .menucontainer {
     padding: 11px 0 16px 0;
   }
-  .containermenu h2 {
+  .menucontainer h2 {
     padding: 0;
   }
-  .containermenu__title {
-    justify-content: center;
-  }
-  .containermenu__title .heart-label {
+  .menucontainer .heart-label {
     bottom: 12px;
   }
   .allmenu {
