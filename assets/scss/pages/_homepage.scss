@@ -163,7 +163,6 @@
     &__card {
         color: inherit;
         text-decoration: none;
-        position: relative;
 
         & img {
             height: 192px;
@@ -186,14 +185,13 @@
 /*** Tablette mode ***/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
 
-    .fonct {
+    .fonct .fonct {
         padding: 50px 20px 50px 20px;
 
         &__steps {
             flex-direction: row;
             width: 100%;
             gap: 25px;
-
         }
 
         &__step {
@@ -209,17 +207,18 @@
             gap: 28px;
             flex-direction: row;
             justify-content: center;
-
-            & a {
-                width: 45%;
-            }
         }
+
+        &__cards {
+            width: 45%;
+        }
+
     }
 }
 
 
 /*** desktop mode ***/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
     .expl {
         &__text {
             width: 100%;
@@ -227,7 +226,6 @@
 
         & p {
             height: 46px;
-            width: 100%;
         }
 
     }
@@ -255,12 +253,10 @@
             flex-direction: row;
             justify-content: center;
             width: 100%;
-
-            & a {
-                width: 48%;
-            }
         }
 
-
+        &__cards {
+            width: 48%;
+        }
     }
 }

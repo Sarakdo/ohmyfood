@@ -57,6 +57,7 @@ ol {
   transition: opacity 0.3s ease;
   position: absolute;
   right: 20px;
+  top: 20px;
 }
 .restaurant__heart .heart-full {
   opacity: 0;
@@ -385,7 +386,6 @@ header .local input {
 .restaurant__card {
   color: inherit;
   text-decoration: none;
-  position: relative;
 }
 .restaurant__card img {
   height: 192px;
@@ -404,15 +404,15 @@ header .local input {
 /***** Media queries******/
 /*** Tablette mode ***/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  .fonct {
+  .fonct .fonct {
     padding: 50px 20px 50px 20px;
   }
-  .fonct__steps {
+  .fonct .fonct__steps {
     flex-direction: row;
     width: 100%;
     gap: 25px;
   }
-  .fonct__step {
+  .fonct .fonct__step {
     padding: 20px 4px 20px 20px;
   }
   .restaurant {
@@ -424,18 +424,17 @@ header .local input {
     flex-direction: row;
     justify-content: center;
   }
-  .restaurant__container a {
+  .restaurant__cards {
     width: 45%;
   }
 }
 /*** desktop mode ***/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .expl__text {
     width: 100%;
   }
   .expl p {
     height: 46px;
-    width: 100%;
   }
   .fonct {
     padding: 50px 90px;
@@ -458,7 +457,7 @@ header .local input {
     justify-content: center;
     width: 100%;
   }
-  .restaurant__container a {
+  .restaurant__cards {
     width: 48%;
   }
 }
@@ -504,7 +503,6 @@ header .local input {
 }
 .menucontainer__title {
   display: flex;
-  width: 100%;
   flex-direction: row;
   gap: 42px;
   align-items: center;
@@ -587,7 +585,7 @@ header .local input {
   animation-delay: 0.3s;
 }
 .menuitems__info:nth-child(2) {
-  animation-delay: 0.6s;
+  animation-delay: 2s;
 }
 .menuitems__info:nth-child(3) {
   animation-delay: 0.9s;
@@ -613,7 +611,7 @@ header .local input {
 .menuitems__info:nth-child(10) {
   animation-delay: 3s;
 }
-.menuitems__info .check {
+.menuitems__info .price-check {
   display: flex;
   flex-direction: row;
 }
@@ -650,6 +648,7 @@ header .local input {
   align-items: flex-end;
   margin: 0;
   padding: 15px;
+  cursor: pointer;
 }
 
 .checkbox-custom {
@@ -697,7 +696,7 @@ header .local input {
   }
 }
 /*** Tablette mode ***/
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   .menuheader {
     padding: 14px 14px 13px 17px;
     gap: 267px;
@@ -711,7 +710,7 @@ header .local input {
   }
 }
 /*** Desktop mode ***/
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+@media screen and (min-width: 1025px) {
   .menumain {
     padding-left: 192px;
     padding-right: 192px;
