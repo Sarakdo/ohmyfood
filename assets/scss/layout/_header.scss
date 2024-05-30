@@ -45,10 +45,7 @@ header {
 }
 
 /*** Tablette mode ***/
-@media screen and (min-width:768px) and (max-width:1023px) {}
-
-/*** Desktop mode ***/
-@media screen and (min-width: 1024px) and (max-width:1440px) {
+@media screen and (min-width:768px) and (max-width:1023px) {
     header {
         width: 100%;
         display: flex;
@@ -65,3 +62,6 @@ header {
     }
 
 }
+
+/*** Desktop mode ***/
+@media screen and (min-width: 1025px) {}
