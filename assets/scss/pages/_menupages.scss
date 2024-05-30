@@ -1,27 +1,23 @@
 .menuheader {
-    flex-direction: row;
-    align-items: center;
-    padding: 14px 89px 13px 17px;
-    gap: 42px;
-    display: flex;
-
+    justify-content: center;
+    padding: 14px 14px 13px 17px;
+    position: relative;
 
     & a {
         color: black;
         transition: transform 3s;
         font-size: 20px;
+        position: absolute;
+        position: absolute;
+        left: 22px;
+        top: 22px;
+        cursor: pointer;
 
         & :active {
             transform: scale(0);
         }
     }
 
-    .iconleft {
-        position: absolute;
-        left: 22px;
-        top: 22px;
-        cursor: pointer;
-    }
 }
 
 .restoimg {
@@ -49,6 +45,10 @@
         align-items: center;
         padding-left: 10px;
         justify-content: center;
+    }
+
+    &__heart {
+        width: 40px;
     }
 }
 
@@ -282,14 +282,10 @@
 
 
 /*** Tablette mode ***/
-@media screen and (max-width:1024px) {
+@media screen and (min-width:768px) and (max-width:1024px) {
 
-    .menuheader {
-        padding: 14px 14px 13px 17px;
-        gap: 267px;
-    }
 
-    .containermenu {
+    .menucontainer {
         &__title {
             display: flex;
             justify-content: center;
@@ -311,12 +307,7 @@
 
     .menuheader {
         box-shadow: none;
-        gap: 553px;
-        display: flex;
-        align-items: flex-end;
-        justify-content: flex-start;
-        padding: 33px 50px 33px 50px;
-        width: auto;
+
     }
 
     .fonct {

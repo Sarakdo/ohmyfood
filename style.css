@@ -229,7 +229,7 @@ header .local input {
 }
 
 /*** Tablette mode ***/
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   header {
     width: 100%;
     display: flex;
@@ -475,25 +475,22 @@ header .local input {
   }
 }
 .menuheader {
-  flex-direction: row;
-  align-items: center;
-  padding: 14px 89px 13px 17px;
-  gap: 42px;
-  display: flex;
+  justify-content: center;
+  padding: 14px 14px 13px 17px;
+  position: relative;
 }
 .menuheader a {
   color: black;
   transition: transform 3s;
   font-size: 20px;
-}
-.menuheader a :active {
-  transform: scale(0);
-}
-.menuheader .iconleft {
+  position: absolute;
   position: absolute;
   left: 22px;
   top: 22px;
   cursor: pointer;
+}
+.menuheader a :active {
+  transform: scale(0);
 }
 
 .restoimg {
@@ -521,6 +518,9 @@ header .local input {
   align-items: center;
   padding-left: 10px;
   justify-content: center;
+}
+.menucontainer__heart {
+  width: 40px;
 }
 
 .order {
@@ -709,12 +709,8 @@ header .local input {
   }
 }
 /*** Tablette mode ***/
-@media screen and (max-width: 1024px) {
-  .menuheader {
-    padding: 14px 14px 13px 17px;
-    gap: 267px;
-  }
-  .containermenu__title {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .menucontainer__title {
     display: flex;
     justify-content: center;
   }
@@ -730,12 +726,6 @@ header .local input {
   }
   .menuheader {
     box-shadow: none;
-    gap: 553px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    padding: 33px 50px 33px 50px;
-    width: auto;
   }
   .fonct {
     padding: 50px 119px;
