@@ -229,8 +229,21 @@ header .local input {
 }
 
 /*** Tablette mode ***/
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  header__logo {
+    height: 96px;
+  }
+  header .local {
+    box-shadow: none;
+  }
+}
 /*** Desktop mode ***/
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+@media screen and (min-width: 1025px) {
   header {
     width: 100%;
     display: flex;
@@ -265,7 +278,7 @@ header .local input {
   font-size: 18px;
   font-weight: 300;
   font-family: "Roboto";
-  margin-left: 26px;
+  margin-left: 9px;
 }
 .expl__btn {
   border: 0;
@@ -282,7 +295,7 @@ header .local input {
   height: 25px;
 }
 .expl__btn:hover {
-  background-color: white;
+  background-color: #fff;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -533,7 +546,7 @@ header .local input {
   align-items: center;
 }
 .order__btn:hover {
-  background-color: white;
+  background-color: #fff;
   box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
