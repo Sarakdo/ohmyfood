@@ -516,8 +516,8 @@ header .local input {
   flex-direction: row;
   gap: 42px;
   align-items: center;
-  padding-left: 10px;
   justify-content: center;
+  width: 100%;
 }
 .menucontainer__heart {
   width: 40px;
