@@ -254,6 +254,10 @@
     }
 }
 
+.menuitems__group {
+    width: 60%;
+}
+
 // le ~ concerne l'élément frère
 .select-checkbox:checked~label .checkbox-custom {
     //select-checkbox
@@ -284,7 +288,6 @@
 
 /*** Tablette mode ***/
 @media screen and (min-width:768px) and (max-width:1024px) {
-
 
     .menucontainer {
         &__title {
