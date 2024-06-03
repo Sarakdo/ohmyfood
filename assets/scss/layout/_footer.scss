@@ -15,7 +15,18 @@
         color: white;
         text-decoration: none;
         font-family: "roboto";
+
+        & i {
+            margin-right: 10px;
+            font-size: 14px;
+
+            &-handshake {
+                font-size: 11px;
+                margin-right: 8px;
+            }
+        }
     }
+
 
     &__list {
         display: flex;
@@ -25,14 +36,13 @@
         gap: 7px;
     }
 
-    &__listElt {
-        margin-left: 10px;
-    }
-
     &__icon {
         padding-right: 7px;
+
     }
 }
+
+
 
 /*** Tablette mode ***/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -49,7 +59,7 @@
 }
 
 /*** Desktop mode ***/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
 
     .linkfooter {
         flex-direction: row-reverse;
