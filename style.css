@@ -524,6 +524,7 @@ header .local input {
   gap: 18px;
   align-items: center;
   width: 100%;
+  justify-content: center;
 }
 .menucontainer__heart {
   width: 40px;
@@ -592,6 +593,40 @@ header .local input {
 .menuitems {
   transform: scale(0);
   animation: itemApear 1s ease-out forwards;
+  /* 
+     &:nth-child(5) {
+         animation-delay: 1.2s;
+     }
+
+     &:nth-child(6) {
+         animation-delay: 1.5s;
+     }
+
+     &:nth-child(7) {
+         animation-delay: 1.8s;
+     }
+
+     &:nth-child(8) {
+         animation-delay: 2.1s;
+     }
+
+     &:nth-child(9) {
+         animation-delay: 2.4s;
+     }
+
+     &:nth-child(10) {
+         animation-delay: 2.7s;
+     }
+
+     &:nth-child(11) {
+         animation-delay: 3s;
+     }
+
+     &:nth-child(12) {
+         animation-delay: 3.3s;
+     }
+
+  */
 }
 .menuitems:nth-child(2) {
   animation-delay: 0.3s;
@@ -601,30 +636,6 @@ header .local input {
 }
 .menuitems:nth-child(4) {
   animation-delay: 0.9s;
-}
-.menuitems:nth-child(5) {
-  animation-delay: 1.2s;
-}
-.menuitems:nth-child(6) {
-  animation-delay: 1.5s;
-}
-.menuitems:nth-child(7) {
-  animation-delay: 1.8s;
-}
-.menuitems:nth-child(8) {
-  animation-delay: 2.1s;
-}
-.menuitems:nth-child(9) {
-  animation-delay: 2.4s;
-}
-.menuitems:nth-child(10) {
-  animation-delay: 2.7s;
-}
-.menuitems:nth-child(11) {
-  animation-delay: 3s;
-}
-.menuitems:nth-child(12) {
-  animation-delay: 3.3s;
 }
 .menuitems .price-check {
   display: flex;
