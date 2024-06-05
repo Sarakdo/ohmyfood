@@ -31,7 +31,7 @@
     background-color: #f6f6f6;
     position: relative;
 
-    & h2 {
+    & h1 {
         font-family: "Shrikhand";
         font-size: 28px;
         font-style: normal;
@@ -100,7 +100,7 @@
         flex-direction: column;
         position: relative;
 
-        & h3 {
+        & h2 {
             padding-left: 16px;
             padding-bottom: 18px;
             position: relative;
@@ -120,6 +120,7 @@
     }
 }
 
+/**** Animations des menus ****/
 .menuitems {
     transform: scale(0);
     animation: itemApear 1s ease-out forwards;
@@ -137,40 +138,6 @@
         animation-delay: .9s;
     }
 
-    /* 
-    &:nth-child(5) {
-        animation-delay: 1.2s;
-    }
-
-    &:nth-child(6) {
-        animation-delay: 1.5s;
-    }
-
-    &:nth-child(7) {
-        animation-delay: 1.8s;
-    }
-
-    &:nth-child(8) {
-        animation-delay: 2.1s;
-    }
-
-    &:nth-child(9) {
-        animation-delay: 2.4s;
-    }
-
-    &:nth-child(10) {
-        animation-delay: 2.7s;
-    }
-
-    &:nth-child(11) {
-        animation-delay: 3s;
-    }
-
-    &:nth-child(12) {
-        animation-delay: 3.3s;
-    }
-
- */
     .price-check {
         display: flex;
         flex-direction: row;
@@ -193,7 +160,7 @@
         white-space: nowrap;
         padding: 15px;
 
-        & h4 {
+        & h3 {
             margin: 0;
             white-space: nowrap;
             text-overflow: ellipsis;
@@ -229,6 +196,23 @@
     }
 }
 
+//*** Animation des menus ***//
+@keyframes itemApear {
+    0% {
+        transform: scale(0);
+        transform-origin: 50% 90%;
+    }
+
+    90% {
+        transform: scale(1.03);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/****Animations du check des menus ****/
 .checkbox-custom {
     background-color: #99e2d0;
     width: 0px;
@@ -255,7 +239,7 @@
 }
 
 .menuitems__group {
-    width: 60%;
+    width: 60%; // taille du carré vert du check
 }
 
 // le ~ concerne l'élément frère
@@ -267,24 +251,6 @@
 .select-checkbox:checked~.menuitems__info {
     transform: translateX(-60px); // rétrécir la barre de menu vers gauche
 }
-
-
-//*** Animation des menus ***//
-@keyframes itemApear {
-    0% {
-        transform: scale(0);
-        transform-origin: 50% 90%;
-    }
-
-    90% {
-        transform: scale(1.03);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
 
 /*** Tablette mode ***/
 @media screen and (min-width:768px) and (max-width:1024px) {
@@ -325,7 +291,7 @@
     .menucontainer {
         padding: 11px 0 16px 0;
 
-        & h2 {
+        & h1 {
             padding: 0;
         }
 

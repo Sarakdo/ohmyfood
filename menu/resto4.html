@@ -17,7 +17,7 @@
 
 <body>
     <header class="menuheader">
-        <a href="../index.html">
+        <a href="../index.html"> <!-- flèche de retour à la page d'accueil -->
             <i class="fa-sharp fa-solid fa-arrow-left"></i>
         </a>
 
@@ -32,8 +32,8 @@
     <main class="menumain">
         <section class="menucontainer">
             <div class="menucontainer__title">
-                <h2>Le délice des sens</h2>
-                <div class="menucontainer__heart">
+                <h1>Le délice des sens</h1>
+                <div class="menucontainer__heart"> <!-- coeur qui se rempli au clique -->
                     <input type="checkbox" id="heart-checkbox" class="heart-checkbox" hidden>
                     <label for="heart-checkbox" class="heart-label">
                         <i class="fa-regular fa-heart heart-empty"></i>
@@ -41,23 +41,23 @@
                     </label>
                 </div>
             </div>
-
+            <!-- PRESENTATION DES MENUS -->
             <article class="allmenu">
+                <!-- CONTAINER DES ENTREES -->
                 <section class="allmenu__container">
-                    <h3>ENTRÉES</h3>
-
+                    <h2>ENTRÉES</h2>
                     <section class="menuitems">
                         <div for="select-checkbox1" class="menuitems__info">
                             <input type="checkbox" id="select-checkbox1" class="select-checkbox" hidden />
                             <label for="select-checkbox1" class="menuitems__group">
                                 <span class="menuitems__text">
-                                    <h4 class="menuitems__title">Tartare de thon</h4>
+                                    <h3 class="menuitems__title">Tartare de thon</h3>
                                     <p class="menuitems__subtitle">Assaisonné au yuzu</p>
                                 </span>
                             </label>
                             <label class="price-check" for="select-checkbox1">
                                 <p class="menuitems__price">25€</p>
-                                <span class="checkbox-custom">
+                                <span class="checkbox-custom"> <!-- carré vert du check -->
                                     <i class="fa-solid fa-check"></i>
                                 </span>
                             </label>
@@ -70,14 +70,14 @@
                             <label for="select-checkbox2" class="menuitems__group">
 
                                 <span class="menuitems__text">
-                                    <h4 class="menuitems__title">Bouchée de homard croustillant </h4>
+                                    <h3 class="menuitems__title">Bouchée de homard croustillant </h3>
                                     <p class="menuitems__subtitle">Et sa farandole de petits légumes</p>
                                 </span>
                             </label>
 
                             <label class="price-check" for="select-checkbox2">
                                 <p class="menuitems__price">35€</p>
-                                <span class="checkbox-custom">
+                                <span class="checkbox-custom"> <!-- carré vert du check -->
                                     <i class="fa-solid fa-check"></i>
                                 </span>
                             </label>
@@ -90,14 +90,14 @@
                             <label for="select-checkbox3" class="menuitems__group">
 
                                 <span class="menuitems__text">
-                                    <h4 class="menuitems__title">Velouté de cèpes </h4>
+                                    <h3 class="menuitems__title">Velouté de cèpes </h3>
                                     <p class="menuitems__subtitle">Aux truffes</p>
                                 </span>
                             </label>
 
                             <label class="price-check" for="select-checkbox3">
                                 <p class="menuitems__price">20€</p>
-                                <span class="checkbox-custom">
+                                <span class="checkbox-custom"> <!-- carré vert du check -->
                                     <i class="fa-solid fa-check"></i>
                                 </span>
                             </label>
@@ -105,23 +105,24 @@
                     </section>
 
                 </section>
+                <!-- CONTAINER DES PLATS -->
 
                 <section class="allmenu__container">
-                    <h3>PLATS</h3>
+                    <h2>PLATS</h2>
                     <section class="menuitems">
                         <div for="select-checkbox4" class="menuitems__info">
                             <input type="checkbox" id="select-checkbox4" class="select-checkbox" hidden />
                             <label for="select-checkbox4" class="menuitems__group">
 
                                 <span class="menuitems__text">
-                                    <h4 class="menuitems__title">Poulet rôti aux herbes de Provence</h4>
+                                    <h3 class="menuitems__title">Poulet rôti aux herbes de Provence</h3>
                                     <p class="menuitems__subtitle">Et sa crème de truffe</p>
                                 </span>
                             </label>
 
                             <label class="price-check" for="select-checkbox4">
                                 <p class="menuitems__price">40€</p>
-                                <span class="checkbox-custom">
+                                <span class="checkbox-custom"> <!-- carré vert du check -->
                                     <i class="fa-solid fa-check"></i>
                                 </span>
                             </label>
@@ -134,14 +135,14 @@
                             <label for="select-checkbox5" class="menuitems__group">
 
                                 <span class="menuitems__text">
-                                    <h4 class="menuitems__title">Langouste rôtie </h4>
+                                    <h3 class="menuitems__title">Langouste rôtie </h3>
                                     <p class="menuitems__subtitle">Et ses légumes de saison</p>
                                 </span>
                             </label>
 
                             <label class="price-check" for="select-checkbox5">
                                 <p class="menuitems__price">35€</p>
-                                <span class="checkbox-custom">
+                                <span class="checkbox-custom"> <!-- carré vert du check -->
                                     <i class="fa-solid fa-check"></i>
                                 </span>
                             </label>
@@ -154,44 +155,42 @@
                             <label for="select-checkbox6" class="menuitems__group">
 
                                 <span class="menuitems__text">
-                                    <h4 class="menuitems__title">Côte de bœuf Angus</h4>
+                                    <h3 class="menuitems__title">Côte de bœuf Angus</h3>
                                     <p class="menuitems__subtitle">Et sa purée de panais</p>
                                 </span>
                             </label>
 
                             <label class="price-check" for="select-checkbox6">
                                 <p class="menuitems__price">44€</p>
-                                <span class="checkbox-custom">
+                                <span class="checkbox-custom"> <!-- carré vert du check -->
                                     <i class="fa-solid fa-check"></i>
                                 </span>
                             </label>
                         </div>
                     </section>
                 </section>
-
+                <!-- CONTAINER DES DESSERTS -->
                 <section class="allmenu__container">
-                    <h3>DESSERTS</h3>
+                    <h2>DESSERTS</h2>
                     <section class="menuitems">
                         <div for="select-checkbox7" class="menuitems__info">
                             <input type="checkbox" id="select-checkbox7" class="select-checkbox" hidden />
                             <label for="select-checkbox7" class="menuitems__group">
 
                                 <span class="menuitems__text">
-                                    <h4 class="menuitems__title">Farandole de desserts</h4>
+                                    <h3 class="menuitems__title">Farandole de desserts</h3>
                                     <p class="menuitems__subtitle">Du chef</p>
                                 </span>
                             </label>
 
                             <label class="price-check" for="select-checkbox7">
                                 <p class="menuitems__price">18€</p>
-                                <span class="checkbox-custom">
+                                <span class="checkbox-custom"> <!-- carré vert du check -->
                                     <i class="fa-solid fa-check"></i>
                                 </span>
                             </label>
                         </div>
                     </section>
-
-
 
                     <section class="menuitems">
                         <div for="select-checkbox8" class="menuitems__info">
@@ -199,21 +198,19 @@
                             <label for="select-checkbox8" class="menuitems__group">
 
                                 <span class="menuitems__text">
-                                    <h4 class="menuitems__title">Crème brulée</h4>
+                                    <h3 class="menuitems__title">Crème brulée</h3>
                                     <p class="menuitems__subtitle">Revisité</p>
                                 </span>
                             </label>
 
                             <label class="price-check" for="select-checkbox8">
                                 <p class="menuitems__price">22€</p>
-                                <span class="checkbox-custom">
+                                <span class="checkbox-custom"> <!-- carré vert du check -->
                                     <i class="fa-solid fa-check"></i>
                                 </span>
                             </label>
                         </div>
                     </section>
-
-
 
                     <section class="menuitems">
                         <div for="select-checkbox9" class="menuitems__info">
@@ -221,14 +218,14 @@
                             <label for="select-checkbox9" class="menuitems__group">
 
                                 <span class="menuitems__text">
-                                    <h4 class="menuitems__title">Tiramisu</h4>
+                                    <h3 class="menuitems__title">Tiramisu</h3>
                                     <p class="menuitems__subtitle">À la noisette</p>
                                 </span>
                             </label>
 
                             <label class="price-check" for="select-checkbox9">
                                 <p class="menuitems__price">23€</p>
-                                <span class="checkbox-custom">
+                                <span class="checkbox-custom"> <!-- carré vert du check -->
                                     <i class="fa-solid fa-check"></i>
                                 </span>
                             </label>
@@ -238,7 +235,7 @@
             </article>
 
             <div class="order">
-                <span class="order__btn">Commander</span>
+                <span class="order__btn">Commander</span> <!-- bouton de commande en hover  -->
             </div>
 
         </section>
@@ -262,7 +259,7 @@
                 </li>
 
                 <li class="linkfooter__listElt">
-                    <a class="linkfooter__link" href="mailto:contact@ohmyfood.com">
+                    <a class="linkfooter__link" href="mailto:contact@ohmyfood.com"> <!-- lien de contact via mail -->
                         Contact
                     </a>
                 </li>

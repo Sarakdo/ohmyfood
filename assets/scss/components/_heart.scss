@@ -1,12 +1,14 @@
 .restaurant {
     &__heart {
         .heart-label {
+            /* un cursor apparait au survol du coeur */
             position: relative;
             cursor: pointer;
         }
 
         .heart-empty,
         .heart-full {
+            /* surposition des coeurs transparent et noir avec une transition au niveau de l'opacité */
             font-size: 26px;
             transition: opacity 0.3s ease;
             position: absolute;
@@ -15,6 +17,7 @@
         }
 
         .heart-full {
+            /* un dégradé de couleur sur le coeur noir */
             opacity: 0;
             background: linear-gradient(to bottom,
                     rgba(147, 86, 220, 0.9),
@@ -25,10 +28,12 @@
         }
 
         .heart-checkbox:checked+label .heart-empty {
+            /* le coeur est pas rempli initialement */
             opacity: 0;
         }
 
         .heart-checkbox:checked+label .heart-full {
+            /* le coeur est rempli au clic */
             opacity: 1;
         }
     }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /***** Base *****/
 body {
   margin: 0;
@@ -49,11 +50,13 @@ ol {
 
 /***** Components *****/
 .restaurant__heart .heart-label {
+  /* un cursor apparait au survol du coeur */
   position: relative;
   cursor: pointer;
 }
 .restaurant__heart .heart-empty,
 .restaurant__heart .heart-full {
+  /* surposition des coeurs transparent et noir avec une transition au niveau de l'opacité */
   font-size: 26px;
   transition: opacity 0.3s ease;
   position: absolute;
@@ -61,6 +64,7 @@ ol {
   top: 20px;
 }
 .restaurant__heart .heart-full {
+  /* un dégradé de couleur sur le coeur noir */
   opacity: 0;
   background: linear-gradient(to bottom, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   -webkit-background-clip: text;
@@ -68,9 +72,11 @@ ol {
   color: transparent;
 }
 .restaurant__heart .heart-checkbox:checked + label .heart-empty {
+  /* le coeur est pas rempli initialement */
   opacity: 0;
 }
 .restaurant__heart .heart-checkbox:checked + label .heart-full {
+  /* le coeur est rempli au clic */
   opacity: 1;
 }
 
@@ -213,15 +219,14 @@ header .local {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 17px 33px;
+  padding: 17px 0;
   background: #EAEAEA;
   border: none;
-  align-self: stretch;
   gap: 17px;
   box-shadow: -2px 1px 4px 2px rgba(0, 0, 0, 0.25);
+  width: 100%;
 }
 header .local__icon {
-  margin-right: 10px;
   color: #353535;
 }
 header .local input {
@@ -510,7 +515,7 @@ header .local input {
   background-color: #f6f6f6;
   position: relative;
 }
-.menucontainer h2 {
+.menucontainer h1 {
   font-family: "Shrikhand";
   font-size: 28px;
   font-style: normal;
@@ -573,14 +578,14 @@ header .local input {
   flex-direction: column;
   position: relative;
 }
-.allmenu__container h3 {
+.allmenu__container h2 {
   padding-left: 16px;
   padding-bottom: 18px;
   position: relative;
   font-weight: 400;
   margin: 0;
 }
-.allmenu__container h3::after {
+.allmenu__container h2::after {
   content: "";
   border-bottom: 4px solid #99E2D0;
   width: 40px;
@@ -590,43 +595,10 @@ header .local input {
   top: 26px;
 }
 
+/**** Animations des menus ****/
 .menuitems {
   transform: scale(0);
   animation: itemApear 1s ease-out forwards;
-  /* 
-     &:nth-child(5) {
-         animation-delay: 1.2s;
-     }
-
-     &:nth-child(6) {
-         animation-delay: 1.5s;
-     }
-
-     &:nth-child(7) {
-         animation-delay: 1.8s;
-     }
-
-     &:nth-child(8) {
-         animation-delay: 2.1s;
-     }
-
-     &:nth-child(9) {
-         animation-delay: 2.4s;
-     }
-
-     &:nth-child(10) {
-         animation-delay: 2.7s;
-     }
-
-     &:nth-child(11) {
-         animation-delay: 3s;
-     }
-
-     &:nth-child(12) {
-         animation-delay: 3.3s;
-     }
-
-  */
 }
 .menuitems:nth-child(2) {
   animation-delay: 0.3s;
@@ -657,7 +629,7 @@ header .local input {
   white-space: nowrap;
   padding: 15px;
 }
-.menuitems__text h4 {
+.menuitems__text h3 {
   margin: 0;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -688,6 +660,19 @@ header .local input {
   cursor: pointer;
 }
 
+@keyframes itemApear {
+  0% {
+    transform: scale(0);
+    transform-origin: 50% 90%;
+  }
+  90% {
+    transform: scale(1.03);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+/****Animations du check des menus ****/
 .checkbox-custom {
   background-color: #99e2d0;
   width: 0px;
@@ -724,18 +709,6 @@ header .local input {
   transform: translateX(-60px);
 }
 
-@keyframes itemApear {
-  0% {
-    transform: scale(0);
-    transform-origin: 50% 90%;
-  }
-  90% {
-    transform: scale(1.03);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
 /*** Tablette mode ***/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .menucontainer__title {
@@ -765,7 +738,7 @@ header .local input {
   .menucontainer {
     padding: 11px 0 16px 0;
   }
-  .menucontainer h2 {
+  .menucontainer h1 {
     padding: 0;
   }
   .menucontainer .heart-label {

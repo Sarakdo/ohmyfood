@@ -16,22 +16,23 @@
 </head>
 
 <body>
-    <div class="loader-container">
+    <div class="loader-container"> <!-- loading -->
         <div class="loader"></div>
     </div>
 
     <header>
-        <div class="logo">
+        <div class="logo"> <!-- logo du site -->
             <img src="./assets/restaurant/images/logo/ohmyfood.png" alt="logo ohmyfood">
         </div>
-        <div class="local">
-            <i class="fa-solid fa-location-dot local__icon"></i>
+        <div class="local"> <!-- champ pour choisir son lieu -->
+            <label class="local__icon">
+                <i class="fa-solid fa-location-dot"></i>
+            </label>
             <input class="local__search" type="text" placeholder="Paris, Belleville">
         </div>
     </header>
 
     <main>
-
         <section class="expl">
             <h1 class="expl__text">Réservez le menu qui vous convient</h1>
             <p class="expl__subt">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
@@ -40,8 +41,7 @@
 
         <section class="fonct">
             <h2>Fonctionnement</h2>
-
-            <div class="container">
+            <div class="container"> <!-- étapes pour faire son choix  -->
                 <ol class="fonct__steps">
                     <li class="fonct__step">
                         <i class="fa-solid fa-mobile-screen-button fonct__icon"></i>
@@ -54,19 +54,19 @@
                     </li>
 
                     <li class="fonct__step">
-                        <i class="fa-solid fa-shop fonct__icon-purple"></i>
+                        <i class="fa-solid fa-shop fonct__icon-purple"></i> <!-- icon en violet -->
                         <span class=fonct__text>Dégustez au restaurant</span>
                     </li>
                 </ol>
             </div>
         </section>
-
+        <!-- PRESENTATION DES RESTAURANTS -->
         <section class="restaurant">
             <h2>Restaurants</h2>
             <div class=" restaurant__container">
                 <div class="restaurant__cards">
-                    <a class="restaurant__card" href="./menu/resto1.html">
-                        <span class="restaurant__cardbadge">Nouveau</span>
+                    <a class="restaurant__card" href="./menu/resto1.html"> <!-- liens du resto 1 -->
+                        <span class="restaurant__cardbadge">Nouveau</span> <!-- badge nouveau resto -->
                         <img src="./assets/restaurant/images/restaurants/palette-du-gout.jpg"
                             alt="image de restaurant montrant des plats">
                     </a>
@@ -77,7 +77,7 @@
                                 <p>Ménilmontant</p>
                             </div>
                         </a>
-                        <div class="restaurant__heart">
+                        <div class="restaurant__heart"> <!-- coeur cliquable -->
                             <input type="checkbox" id="heart-checkbox1" class="heart-checkbox" hidden>
                             <label for="heart-checkbox1" class="heart-label">
                                 <i class="fa-regular fa-heart heart-empty"></i>
@@ -87,10 +87,9 @@
                     </div>
                 </div>
 
-
                 <div class="restaurant__cards">
-                    <a class="restaurant__card" href="./menu/resto2.html">
-                        <span class="restaurant__cardbadge">Nouveau</span>
+                    <a class="restaurant__card" href="./menu/resto2.html"> <!-- liens du resto 2 -->
+                        <span class="restaurant__cardbadge">Nouveau</span> <!-- badge nouveau resto -->
                         <img src="./assets/restaurant/images/restaurants/la-note-enchantee.jpg"
                             alt="image de restaurant montrant des plats">
                     </a>
@@ -101,7 +100,7 @@
                                 <p>Charonne</p>
                             </div>
                         </a>
-                        <div class="restaurant__heart">
+                        <div class="restaurant__heart"> <!-- coeur cliquable -->
                             <input type="checkbox" id="heart-checkbox2" class="heart-checkbox" hidden>
                             <label for="heart-checkbox2" class="heart-label">
                                 <i class="fa-regular fa-heart heart-empty"></i>
@@ -111,10 +110,8 @@
                     </div>
                 </div>
 
-
-
                 <div class="restaurant__cards">
-                    <a class="restaurant__card" href="./menu/resto3.html">
+                    <a class="restaurant__card" href="./menu/resto3.html"> <!-- liens du resto 3 -->
                         <img src="./assets/restaurant/images/restaurants/a-la-francaise.jpg"
                             alt="image de restaurant montrant des plats">
                     </a>
@@ -125,7 +122,7 @@
                                 <p>Cité Rouge </p>
                             </div>
                         </a>
-                        <div class="restaurant__heart">
+                        <div class="restaurant__heart"> <!-- coeur cliquable -->
                             <input type="checkbox" id="heart-checkbox3" class="heart-checkbox" hidden>
                             <label for="heart-checkbox3" class="heart-label">
                                 <i class="fa-regular fa-heart heart-empty"></i>
@@ -135,10 +132,8 @@
                     </div>
                 </div>
 
-
-
                 <div class="restaurant__cards">
-                    <a class="restaurant__card" href="./menu/resto4.html">
+                    <a class="restaurant__card" href="./menu/resto4.html"> <!-- liens du resto 4 -->
                         <img src="./assets/restaurant/images/restaurants/le-delice-des-sens.jpg"
                             alt="image de restaurant montrant des plats">
                     </a>
@@ -149,9 +144,7 @@
                                 <p>Folie-Méricourt </p>
                             </div>
                         </a>
-
-
-                        <div class="restaurant__heart">
+                        <div class="restaurant__heart"> <!-- coeur cliquable -->
                             <input type="checkbox" id="heart-checkbox4" class="heart-checkbox" hidden>
                             <label for="heart-checkbox4" class="heart-label">
                                 <i class="fa-regular fa-heart heart-empty"></i>
@@ -163,8 +156,7 @@
             </div>
         </section>
     </main>
-
-
+    <!-- FOOTER -->
     <footer>
         <div class="linkfooter">
             <h4>Ohmyfood</h4>
@@ -184,7 +176,7 @@
                 </li>
 
                 <li class="linkfooter__listElt">
-                    <a class="linkfooter__link" href="mailto:contact@ohmyfood.com">
+                    <a class="linkfooter__link" href="mailto:contact@ohmyfood.com"> <!-- lien de contact via mail -->
                         Contact
                     </a>
                 </li>
