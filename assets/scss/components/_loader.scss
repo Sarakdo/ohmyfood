@@ -27,12 +27,11 @@ body {
     }
 }
 
+
+/* Animation du loader */
 @keyframes white-screen {
-    0% {
-        //* rajouter avec une opacity qui diminue*/ 40%..
 
-    }
-
+    // ecran blanc en arrière plan
     100% {
         z-index: -10;
         opacity: 0;
@@ -40,6 +39,8 @@ body {
 }
 
 @keyframes spin {
+
+    // rotation à 360 degré de l'animation
     100% {
         transform: rotate(360deg);
     }
