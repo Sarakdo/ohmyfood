@@ -10,7 +10,7 @@
         .heart-full {
             /* surposition des coeurs transparent et noir avec une transition au niveau de l'opacité */
             font-size: 26px;
-            transition: opacity 0.3s ease;
+            transition: opacity 0.3s ease; //remplissage progessif
             position: absolute;
             right: 20px;
             top: 20px;

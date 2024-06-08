@@ -132,6 +132,7 @@ body {
   animation: spin 1s ease infinite;
 }
 
+/* Animation du loader */
 @keyframes white-screen {
   100% {
     z-index: -10;

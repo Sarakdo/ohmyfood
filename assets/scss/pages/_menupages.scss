@@ -123,11 +123,11 @@
 /**** Animations des menus ****/
 .menuitems {
     transform: scale(0);
-    animation: itemApear 1s ease-out forwards;
+    animation: itemApear 1s ease-out forwards; // commence rapidement et ralenti et reste en page
 
 
     &:nth-child(2) {
-        animation-delay: .3s;
+        animation-delay: .3s; //decalage de temps entre les menus
     }
 
     &:nth-child(3) {
@@ -199,7 +199,7 @@
 //*** Animation des menus ***//
 @keyframes itemApear {
     0% {
-        transform: scale(0);
+        transform: scale(0); //apparait progressivement
         transform-origin: 50% 90%;
     }
 
@@ -222,7 +222,7 @@
     display: flex;
     place-items: center;
     justify-content: center;
-    transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out; //accélère et ralenti à la fin
     cursor: pointer;
 
     & i {
@@ -234,7 +234,7 @@
         align-items: center;
         justify-content: center;
         border-radius: 100px;
-        transition-duration: .5s;
+        transition-duration: .5s; //pour avoir un ffet plus fluide au check
     }
 }
 
@@ -242,14 +242,14 @@
     width: 60%; // taille du carré vert du check
 }
 
-// le ~ concerne l'élément frère
+// le ~ concerne l'élément frère qui est situé au même niveau 
 .select-checkbox:checked~label .checkbox-custom {
     //select-checkbox
     width: 69px; // remplissage complet
 }
 
 .select-checkbox:checked~.menuitems__info {
-    transform: translateX(-60px); // rétrécir la barre de menu vers gauche
+    transform: translateX(-60px); // rétrécir la barre de menu à l'horizontal vers gauche
 }
 
 /*** Tablette mode ***/
